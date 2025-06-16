@@ -1,16 +1,5 @@
 BOOK       := pandoc-ebook
-# SRC        := $(wildcard src/*.md)
-
-SRC = \
-  src/00_preface.md \
-  src/01_intro.md \
-  src/02_markdown_basics.md \
-  src/03_pandoc_install.md \
-  src/04_workflow_setup.md \
-  src/05_advanced_features.md \
-  src/06_ci_cd.md \
-  src/07_troubleshooting.md \
-  src/99_appendix.md
+SRC        := $(wildcard src/*.md)
 
 DIST_DIR   := dist
 DIST       := $(DIST_DIR)/$(BOOK).epub
@@ -29,10 +18,8 @@ PANDOC_OPTS := \
   --epub-title-page=false \
   --epub-chapter-level=1 \
   --epub-subdirectory=OEBPS \
-  --epub-embed-font=fonts/*.ttf \
   --epub-metadata=metadata.yaml \
   --variable=lang:ja \
-  --variable=documentclass=bxjsarticle \
   --resource-path=.:images
 
 PDF_OPTS := \
