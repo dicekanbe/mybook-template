@@ -1,12 +1,3 @@
----
-title: "はじめに"
-author: "Abe Daisuke"
-date: "2025-06-15"
-summary: |
-  本書の背景と目的、読者に期待する前提知識、全体構成を簡潔に紹介します。
-keywords: ["Preface", "Pandoc", "電子書籍"]
----
-
 # はじめに
 
 ## 本書の背景と目的

@@ -1,11 +1,3 @@
----
-title: "第3章: Pandoc のインストール"
-subtitle: "Homebrew + macOS Sequoia"
-summary: |
-  Homebrew を使った Pandoc 3.7 系の導入と、依存ツール (epubcheck, Kindle Previewer) の設定。
-keywords: ["Homebrew", "インストール"]
----
-
 # 第3章: Pandoc のインストール
 
 ## 3.1 前提条件

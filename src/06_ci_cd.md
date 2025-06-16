@@ -1,11 +1,3 @@
----
-title: "第6章: CI/CD と自動公開"
-subtitle: "GitHub Actions でタグ→Release→EPUB 配布"
-summary: |
-  macos-15 ランナーで EPUB を自動ビルドし、epubcheck を通過したファイルだけ Release に添付します。
-keywords: ["GitHub Actions", "CI/CD"]
----
-
 # 第6章: CI/CD と自動公開
 
 ## 6.1 GitHub Actions の基本

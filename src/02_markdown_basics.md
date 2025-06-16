@@ -1,11 +1,3 @@
----
-title: "第2章: Markdown 基礎（フロントマター）"
-subtitle: "Pandoc 拡張記法と注意点"
-summary: |
-  見出し・リスト・表・脚注など、Pandoc がサポートする Markdown 拡張を押さえます。
-keywords: ["Markdown", "Pandoc extensions"]
----
-
 # 第2章: Markdown 基礎（本文）
 
 Markdown はシンプルですが、Pandoc ではさらに以下の拡張が利用できます。
