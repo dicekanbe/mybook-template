@@ -4,7 +4,7 @@ subtitle: "参考資料・用語集"
 summary: |
   pandoc-crossref と Lua フィルタで図表番号、相互参照、目次カスタマイズを行います。
 keywords: ["Lua filter", "crossref"]
-chapter-number: 99
+chapter-start: 8
 ---
 
 # 付録: 用語集

@@ -4,30 +4,74 @@ SRC        := $(wildcard src/*.md)
 DIST_DIR   := dist
 DIST       := $(DIST_DIR)/$(BOOK).epub
 PDF        := $(DIST_DIR)/$(BOOK).pdf
+DOCX       := $(DIST_DIR)/$(BOOK).docx
+
+
+# PANDOC_OPTS := \
+#   -f markdown \
+#   -t epub3 \
+#   --standalone \
+#   --metadata-file=metadata.yaml \
+#   --css=css/ebook.css \
+#   --epub-cover-image=images/cover.png \
+#   --lua-filter=filters/number-chapter.lua \
+#   --toc \
+#   --toc-depth=2 \
+#   --variable=lang:ja \
+#   --resource-path=.:images
+
+
+# PANDOC_OPTS := \
+#   -f markdown \
+#   -t epub3 \
+#   --standalone \
+#   --metadata-file=metadata.yaml \
+#   --css=css/ebook.css \
+#   --lua-filter=filters/number-chapter.lua \
+#   --toc \
+#   --toc-depth=2 \
+#   --epub-cover-image=images/cover.png \
+#   --top-level-division=chapter \
+#   --variable=lang:ja \
+#   --resource-path=.:images
+
+# markdown+grid_tables+multiline_tables \
 
 PANDOC_OPTS := \
-  -f markdown \
+  -f markdown+grid_tables+multiline_tables  \
   -t epub3 \
   --standalone \
+  --lua-filter=filters/number-chapter.lua \
+  --template=templates/default.epub \
   --metadata-file=metadata.yaml \
-  --css=css/ebook.css \
-  --epub-cover-image=images/cover.png \
+  --no-highlight \
   --toc \
   --toc-depth=2 \
   --top-level-division=chapter \
-  --epub-title-page=false \
-  --epub-chapter-level=1 \
-  --epub-subdirectory=OEBPS \
-  --epub-metadata=metadata.yaml \
   --variable=lang:ja \
-  --resource-path=.:images
+  --resource-path=.:images \
+  --css=css/ebook.css 
+
+DOCX_OPTS := \
+  -f markdown+grid_tables+multiline_tables  \
+  -t docx \
+  --standalone \
+  --lua-filter=filters/number-chapter.lua \
+  --metadata-file=metadata.yaml \
+  --no-highlight \
+  --toc \
+  --toc-depth=2 \
+  --top-level-division=chapter \
+  --variable=lang:ja \
+  --resource-path=.:images \
+  --css=css/ebook.css 
+
 
 PDF_OPTS := \
   -f markdown+abbreviations+smart \
   -t pdf \
   --standalone \
   --metadata-file=metadata.yaml \
-  --css=css/ebook.css \
   --resource-path=.:images \
   --toc --toc-depth=2 \
   --pdf-engine=xelatex \
@@ -38,12 +82,16 @@ PDF_OPTS := \
   -V CJKmainfont="Hiragino Sans" \
   -V CJKmonofont="Hiragino Sans"
 
-$(DIST): $(SRC) metadata.yaml css/ebook.css images/cover.png | $(DIST_DIR)
-	pandoc $(PANDOC_OPTS) $(SRC) -o $@
+$(DIST): $(SRC) metadata.yaml images/cover.png css/ebook.css templates/default.epub | $(DIST_DIR)
+	pandoc $(PANDOC_OPTS) $(SRC) title.txt -o $@
 	@echo "✅  Rebuilt $@"
 
-$(PDF): $(SRC) metadata.yaml css/ebook.css images/cover.png | $(DIST_DIR)
+$(PDF): $(SRC) metadata.yaml images/cover.png | $(DIST_DIR)
 	pandoc $(PDF_OPTS) $(SRC) -o $@
+	@echo "✅  Rebuilt $@"
+
+$(DOCX): $(SRC) metadata.yaml images/cover.png css/ebook.css | $(DIST_DIR)
+	pandoc $(DOCX_OPTS) $(SRC) -o $@
 	@echo "✅  Rebuilt $@"
 
 $(DIST_DIR):
@@ -56,6 +104,7 @@ clean:
 	rm -rf $(DIST_DIR)
 
 pdf: $(PDF)
+docx: $(DOCX)
 
-.PHONY: watch clean pdf
+.PHONY: watch clean pdf docx
 

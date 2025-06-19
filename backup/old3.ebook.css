@@ -1,31 +1,51 @@
 /* ベースフォントと行間 */
 body {
   font-family: "Hiragino Sans", "Noto Sans JP", serif;
-  line-height: 1.0;
+  line-height: 1.1;
   word-wrap: break-word;
-  margin: 0 0 0 0;
-  font-size: 0.8em;
+  /* margin: 0 4%; */
+  margin: 0;
+  font-size: 0.80em;
 }
 
-/* 章タイトル */
+/* Heading */
 h1 {
-  font-size: 1.2em;
-  margin-top: 0.25em;
-  margin-bottom: 0.15em;
-}
+  margin: 0 0 0.5em;
+  padding: 0.25em 0 0;
+  border-top: 14px #326450 solid;
+  text-align: left;
+  font-size: 1.25em;
+  font-weight: bold; }
 
-/* サブタイトル */
 h2 {
+  margin: 1em 0 0.25em;
+  padding: 0.25em 0 0;
+  border-top: 2px #326450 solid;
+  text-align: left;
   font-size: 1.0em;
-  margin-top: 0.15em;
-  margin-bottom: 0.1em;
-}
+  font-weight: bold; }
 
 h3 {
-  font-size: 0.95em;
-  margin-top: 0.05em;
-  margin-bottom: 0.025em;
-}
+  margin: 1em 0 0.25em;
+  padding: 0;
+  text-align: left;
+  font-size: 0.8em;
+  font-weight: bold; }
+
+h4, h5, h6 {
+  margin: 0.7em 0;
+  padding: 0;
+  text-align: left;
+  line-height: 1.1;
+  font-weight: bold; }
+
+/* Paragraph */
+p {
+  margin: 0.0em 0;
+  padding: 0;
+  text-align: left;
+  text-indent: 1em;
+  line-height: 1.0; }
 
 /* 画像の自動リサイズ */
 img {
@@ -72,6 +92,35 @@ tbody tr:nth-child(even) {
   background: #fafafa;
 }
 
+/* 段落のマージン調整 */
+p {
+  margin: 0.4em 0;
+}
+
+/* リストのスタイル調整 */
+ul, ol {
+  margin: 0.4em 0;
+  padding-left: 1.2em;
+}
+
+li {
+  margin: 0.2em 0;
+}
+
+/* 引用のスタイル調整 */
+blockquote {
+  margin: 0.6em 0;
+  padding: 0.4em 0.8em;
+  border-left: 3px solid #ddd;
+  color: #666;
+  font-size: 0.95em;
+  line-height: 1.2;  /* 行間を狭く */
+}
+
+blockquote p {
+  margin: 0.2em 0;  /* 段落間の余白も狭く */
+}
+
 
 /* ---------- TOC section-number ---------- */
 /* 目次(nav epub:type="toc")内に限り、節番号を非表示 */
@@ -87,7 +136,8 @@ nav#toc .toc-section-number {
 }
 
 nav#toc {
-  padding: 0em;
+  background-color: #f8f9fa;
+  padding: 1em;
   border-radius: 5px;
 }
 
@@ -101,20 +151,32 @@ nav#toc li {
 }
 
 
-pre.code {
-  background: #fafafa;;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 6px 10px;
-  margin: 0.6em 0; 
-  /*padding: 0px;
-  margin: 0px; */
+
+
+/* ---------- CODE BLOCK : base ---------- */
+pre,                      /* ```           */
+pre > code,
+pre.sourceCode,           /* ```bash 等    */
+pre.sourceCode > code {
+  font-family:
+  "SFMono-Regular",
+  "BoxDraw",          /* ← フォールバックを先回りして指定 */
+  Menlo,
+  monospace;
+
+  background: #f6f8fa;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 4px; */
+  /* padding: 6px 10px; */
+  /* margin: 0.6em 0; */
   overflow-x: auto;
-  font-family: "SFMono-Regular", Menlo, monospace;
-  font-size: 0.7em;
+  /* font-family: "SFMono-Regular", Menlo, monospace; */
+  font-size: 0.8em;
   line-height: 1.0;          /* ← 行間をここで統一 */
 }
 
+/* ハイライト用に挿入される span も行間を継承させる */
+pre.sourceCode span { line-height: inherit !important; }
 
 /* ---------- CODE BLOCK : language-specific ---------- */
 /* ※Pandoc は <pre> と <code> の両方に言語名クラスを付けるので
@@ -132,24 +194,17 @@ pre[class~="yaml"] { border-left: 4px solid #3c35ff; }
 pre:not([class*=sourceCode]) { border-left: 4px solid #ddd; }
 
 
-/* ----------------------------------------------------------
-   空行を完全に潰す ─ 行番号アンカーを絶対配置で 0×0 に
-   ---------------------------------------------------------- */
-pre.sourceCode { 
-  position: relative;   /* 基点を作る */
-}
+/* ---------- 行番号・空行の完全削除 ---------- */
+pre.sourceCode a.sourceLine { display: none !important; }
 
-pre.sourceCode a.sourceLine {
-  /* フローから外す */
-  position: absolute !important;
-  left: 0; 
-  top: 0;
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  line-height: 0 !important;   /* 念のため */
+
+/* ---------- 空行(span:empty) を完全に潰す ---------- */
+pre > code.sourceCode > span:empty {
+  height: 0 !important;        /* 高さをゼロ */
+  line-height: 0 !important;   /* 念のため行高もゼロ */
 }
 
 
+pre {
+  margin: 0 !important;        /* UA 既定を上書き */
+} 

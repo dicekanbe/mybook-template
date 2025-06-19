@@ -4,11 +4,12 @@ subtitle: "GitHub Actions でタグ→Release→EPUB 配布"
 summary: |
   macos-15 ランナーで EPUB を自動ビルドし、epubcheck を通過したファイルだけ Release に添付します。
 keywords: ["GitHub Actions", "CI/CD"]
+chapter-start: 6
 ---
 
-# 第6章: CI/CD と自動公開
+# CI/CD と自動公開
 
-## 6.1 GitHub Actions の基本
+## GitHub Actions の基本
 
 ### ワークフローの構成
 
@@ -43,7 +44,7 @@ jobs:
           files: dist/pandoc-ebook.epub
 ```
 
-## 6.2 高度なワークフロー設定
+## 高度なワークフロー設定
 
 ### 複数フォーマットのビルド
 
@@ -94,7 +95,7 @@ jobs:
             ${{ runner.os }}-texlive-
 ```
 
-## 6.3 品質チェックの自動化
+## 品質チェックの自動化
 
 ### リンクチェック
 
@@ -117,7 +118,7 @@ jobs:
           language: en_US,ja_JP
 ```
 
-## 6.4 リリース管理
+## リリース管理
 
 ### バージョン管理
 
@@ -158,7 +159,7 @@ jobs:
             });
 ```
 
-## 6.5 セキュリティ対策
+## セキュリティ対策
 
 ### シークレットの管理
 
@@ -180,7 +181,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 ```
 
-## 6.6 演習問題
+## 演習問題
 
 1. 以下の機能を持つ GitHub Actions ワークフローを作成してください：
    - EPUB と PDF の自動ビルド
@@ -191,7 +192,7 @@ jobs:
 
 3. セキュリティスキャンを組み込んだワークフローを作成してください。
 
-## 6.7 トラブルシューティング
+## トラブルシューティング
 
 ### よくある問題
 
@@ -213,7 +214,7 @@ jobs:
    echo $KDP_API_KEY
    ```
 
-## 6.8 次のステップ
+## 次のステップ
 
 次の章では、以下のトピックについて学びます：
 

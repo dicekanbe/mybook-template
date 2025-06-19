@@ -1,0 +1,7 @@
+---
+title: Pandoc 電書入門
+subtitle: 電子書籍制作の基本を学ぶ
+author: Abe Daisuke
+rights: © 2025 Abe Daisuke
+language: ja-JP
+...

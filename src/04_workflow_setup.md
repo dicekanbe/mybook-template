@@ -4,11 +4,12 @@ subtitle: "Makefile と自動ビルド"
 summary: |
   Makefile と fswatch を用いて、保存と同時に EPUB を再生成するホットリロード環境を作ります。
 keywords: ["Makefile", "fswatch", "自動ビルド"]
+chapter-start: 4
 ---
 
-# 第4章: 執筆ワークフローの構築
+# 執筆ワークフローの構築
 
-## 4.1 プロジェクト構造
+## プロジェクト構造
 
 ### 推奨ディレクトリ構成
 
@@ -46,11 +47,11 @@ rights: "© 2025 著者名"
 ---
 ```
 
-## 4.2 Makefile の作成
+## Makefile の作成
 
 ### 基本的な Makefile
 
-```makefile
+```
 # 変数定義
 SRC_DIR = src
 DIST_DIR = dist
@@ -98,7 +99,7 @@ clean:
 .PHONY: all epub pdf clean
 ```
 
-## 4.3 自動ビルドの設定
+## 自動ビルドの設定
 
 ### fswatch による監視
 
@@ -117,7 +118,7 @@ done
 chmod +x watch.sh
 ```
 
-## 4.4 テンプレートのカスタマイズ
+## テンプレートのカスタマイズ
 
 ### EPUB テンプレート
 
@@ -160,7 +161,7 @@ img {
 }
 ```
 
-## 4.5 高度な機能
+## 高度な機能
 
 ### 目次の自動生成
 
@@ -202,7 +203,7 @@ optimize-images:
    - 表
    - 脚注
 
-## 4.7 トラブルシューティング
+## トラブルシューティング
 
 ### よくある問題
 
@@ -221,7 +222,7 @@ optimize-images:
    pandoc --print-default-template epub3 > templates/default.epub
    ```
 
-## 4.8 次のステップ
+## 次のステップ
 
 次の章では、以下の高度な機能について学びます：
 
