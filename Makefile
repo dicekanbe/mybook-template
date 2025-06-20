@@ -50,9 +50,9 @@ PANDOC_OPTS := \
   --top-level-division=chapter \
   --variable=lang:ja \
   --resource-path=.:images \
-   --css=css/base.css \
-  --css=css/kindle.css \
-  --css=css/ibooks.css
+  --css=css/base.css \
+  --css=css/ibooks.css \
+  --css=css/kindle.css 
 
 DOCX_OPTS := \
   -f markdown+grid_tables+multiline_tables  \

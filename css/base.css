@@ -8,7 +8,7 @@ body {
 pre, pre > code { line-height: 1; }
 
 /* 章タイトル */
-h1 { font-size: 1.2em; margin-top: 0.5em; }
+h1 { font-size: 1em; margin-top: 0.5em; }
 
 nav#toc .toc-section-number {
   display: none;
@@ -28,6 +28,14 @@ nav#toc ol {
 
 nav#toc li {
   margin: 0.5em 0;
+}
+
+p {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  font-size: 0.9em;
 }
 
 /* ダークモード対応 (両リーダー共通) */

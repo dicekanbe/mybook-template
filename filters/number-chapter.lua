@@ -13,7 +13,7 @@ local section_counter = {}
 local in_unnumbered_chapter = false  -- 番号なし章内かどうかのフラグ
 local opts = {
   prefix   = "第",
-  suffix   = "章",
+  suffix   = "章 ",
   start    = 1,
   skip_cls = "unnumbered",
 }
