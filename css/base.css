@@ -1,0 +1,36 @@
+body {
+  font-family: "Hiragino Sans", "Noto Sans JP", serif;
+  line-height: 1.2;
+  margin: 0 5%;
+}
+
+/* コードブロック共通設定 */
+pre, pre > code { line-height: 1; }
+
+/* 章タイトル */
+h1 { font-size: 1.2em; margin-top: 0.5em; }
+
+nav#toc .toc-section-number {
+  display: none;
+}
+
+/* End of Selection */
+
+nav#toc {
+  padding: 0em;
+  border-radius: 5px;
+}
+
+nav#toc ol {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+nav#toc li {
+  margin: 0.5em 0;
+}
+
+/* ダークモード対応 (両リーダー共通) */
+@media (prefers-color-scheme: dark) {
+  body { color: #ddd; background: #111; }
+}

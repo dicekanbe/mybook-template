@@ -1,0 +1,20 @@
+/* KF8/KFX 用 */
+@media amzn-kf8 {
+  /* コードブロックの余白と行高を上書き */
+  pre, pre > code {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;    /* Kindle の最小値ぎりぎり */
+    white-space: pre !important;     /* 自動折返しを抑止 */
+  }
+  /* 罫線文字のフォールバックを抑える */
+  @font-face {
+    font-family: "BoxDraw";
+    src: local("Courier New"), monospace;
+    unicode-range: U+2500-257F;
+  }
+  pre, pre > code {
+    font-family: "AmazonEmberMono","BoxDraw",monospace;
+  }
+}
+

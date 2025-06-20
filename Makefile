@@ -50,7 +50,9 @@ PANDOC_OPTS := \
   --top-level-division=chapter \
   --variable=lang:ja \
   --resource-path=.:images \
-  --css=css/ebook.css 
+   --css=css/base.css \
+  --css=css/kindle.css \
+  --css=css/ibooks.css
 
 DOCX_OPTS := \
   -f markdown+grid_tables+multiline_tables  \
@@ -63,9 +65,7 @@ DOCX_OPTS := \
   --toc-depth=2 \
   --top-level-division=chapter \
   --variable=lang:ja \
-  --resource-path=.:images \
-  --css=css/ebook.css 
-
+  --resource-path=.:images 
 
 PDF_OPTS := \
   -f markdown+abbreviations+smart \
@@ -82,7 +82,7 @@ PDF_OPTS := \
   -V CJKmainfont="Hiragino Sans" \
   -V CJKmonofont="Hiragino Sans"
 
-$(DIST): $(SRC) metadata.yaml images/cover.png css/ebook.css templates/default.epub | $(DIST_DIR)
+$(DIST): $(SRC) metadata.yaml images/cover.png css/base.css css/kindle.css css/ibooks.css templates/default.epub | $(DIST_DIR)
 	pandoc $(PANDOC_OPTS) $(SRC) title.txt -o $@
 	@echo "✅  Rebuilt $@"
 
@@ -90,7 +90,7 @@ $(PDF): $(SRC) metadata.yaml images/cover.png | $(DIST_DIR)
 	pandoc $(PDF_OPTS) $(SRC) -o $@
 	@echo "✅  Rebuilt $@"
 
-$(DOCX): $(SRC) metadata.yaml images/cover.png css/ebook.css | $(DIST_DIR)
+$(DOCX): $(SRC) metadata.yaml images/cover.png | $(DIST_DIR)
 	pandoc $(DOCX_OPTS) $(SRC) -o $@
 	@echo "✅  Rebuilt $@"
 
