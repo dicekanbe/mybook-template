@@ -51,12 +51,11 @@ h6 {
     font-weight: bold;
   }
   h4 {
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-top: 0.2em;
+    margin-left: 0.3em;
     margin-bottom: 0;
     text-align: left;
-    border: 1px solid;
-    border-color: #e80414;
   }
 
   /* p {
@@ -161,8 +160,6 @@ section ol  {
   margin-bottom: 0.2em;
   padding-bottom: 0.2em;
 
-  border: 1px solid;
-  border-color: #3335a2;
 }
 
 section ul {
@@ -171,8 +168,6 @@ section ul {
   margin-left: 0.5em;
   margin-bottom: 0.1em;
   padding-bottom: 0;
-  border: 1px solid;
-  border-color: #760e47;
 }
 
 section ul li {
@@ -185,7 +180,6 @@ section > ol > li {
   margin: 0 0 0 0;
   padding-left: 0.1em;
   font-size: 0.8em;
-  font-weight: normal !important;
 
 }
 

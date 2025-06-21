@@ -4,9 +4,8 @@
   /* ベースフォントと行間 */
   body {
     font-family: "Hiragino Sans", "Noto Sans JP", serif, sans-serif;
-    line-height: 0.7em;
     word-wrap: break-word;
-    font-size: 0.7em;
+    font-size: 1em;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
   }
@@ -87,11 +86,10 @@
 /* ---------- CODE BLOCK STYLING ---------- */
 
 pre {
-  border: 1px solid;
-  border-color: #191ebb;
-  background-color: #eff1f4;
   padding: 0.1em 0.1em 0.5em 0.5em;
   margin: 0.1em 0.1em 0.5em 0.5em;
+  border: 1px solid;
+  background-color: #ffffff;
 }
 
 /* pre > code {
@@ -115,14 +113,12 @@ code {
 
 :not(pre) > code {
   padding: 0.15em 0.1em 0;
+  font-size: 1em;
   word-break: normal;
   vertical-align: 0.06em;
   background-color: rgb(248 238 220 / 66%);
 }
 
-strong {
-  font-size: 1em;
-}
 
 
 /* ダークモード対応 (両リーダー共通) */
