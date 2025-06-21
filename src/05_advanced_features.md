@@ -21,17 +21,13 @@ brew install pandoc-crossref
 
 ```markdown
 # 図表の参照
-
 ![図: ワークフロー](images/workflow.svg){#fig:workflow}
-
 図 @fig:workflow は、全体のワークフローを示しています。
 
 # 数式の参照
-
 $$
 E = mc^2
 $$ {#eq:energy}
-
 式 @eq:energy は、アインシュタインの有名な方程式です。
 ```
 

@@ -188,7 +188,7 @@ optimize-images:
 	find $(SRC_DIR)/images -type f -name "*.png" -exec convert {} -strip -quality 85 {} \;
 ```
 
-## 4.6 演習問題
+## 演習問題
 
 1. 上記の Makefile を実装し、以下のコマンドが動作することを確認してください：
    - `make epub`

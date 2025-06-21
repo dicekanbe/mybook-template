@@ -37,7 +37,7 @@ chapter-start: 7
    pandoc --version
    ```
 
-## 7.2 ビルド時の問題
+## ビルド時の問題
 
 ### 一般的なエラー
 
@@ -148,7 +148,7 @@ chapter-start: 7
    pandoc --metadata-file=metadata.yaml input.md -o output.epub
    ```
 
-## 7.5 パフォーマンスの問題
+## パフォーマンスの問題
 
 ### ビルド時間の最適化
 
@@ -170,7 +170,7 @@ chapter-start: 7
    pandoc --standalone input.md -o output.epub
    ```
 
-## 7.6 演習問題
+## 演習問題
 
 1. 以下のエラーを解決してください：
    - `pandoc: command not found`
