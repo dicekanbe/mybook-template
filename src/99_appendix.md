@@ -49,9 +49,9 @@ chapter-start: 8
 
 ## B.3 コミュニティリソース
 
-- Pandoc ユーザーグループ <https://groups.google.com/forum/#!forum/pandoc-discuss>
-- Stack Overflow の Pandoc タグ <https://stackoverflow.com/questions/tagged/pandoc>
-- GitHub の Pandoc リポジトリ <https://github.com/jgm/pandoc>
+- Pandocユーザーグループ <https://groups.google.com/forum/#!forum/pandoc-discuss>
+- StackOverflowのPandocタグ <https://stackoverflow.com/questions/tagged/pandoc>
+- GitHubのPandoc リポジトリ <https://github.com/jgm/pandoc>
 
 # 索引
 

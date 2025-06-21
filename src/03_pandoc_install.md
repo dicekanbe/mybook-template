@@ -142,16 +142,7 @@ epubcheck test.epub
    brew upgrade pandoc
    ```
 
-## 演習問題
 
-1. Pandoc のインストールを確認し、バージョン情報を表示してください。
-
-2. 以下の変換を試してください：
-   - Markdown → HTML
-   - Markdown → PDF
-   - Markdown → EPUB
-
-3. epubcheck を使用して、生成した EPUB ファイルの検証を行ってください。
 
 ## 次のステップ
 

@@ -188,20 +188,7 @@ optimize-images:
 	find $(SRC_DIR)/images -type f -name "*.png" -exec convert {} -strip -quality 85 {} \;
 ```
 
-## 演習問題
 
-1. 上記の Makefile を実装し、以下のコマンドが動作することを確認してください：
-   - `make epub`
-   - `make pdf`
-   - `make clean`
-
-2. fswatch を使用して、ファイルの変更を監視するスクリプトを作成してください。
-
-3. カスタム CSS を作成し、以下の要素をスタイリングしてください：
-   - 見出し
-   - コードブロック
-   - 表
-   - 脚注
 
 ## トラブルシューティング
 

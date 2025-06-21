@@ -170,16 +170,7 @@ chapter-start: 7
    pandoc --standalone input.md -o output.epub
    ```
 
-## 演習問題
 
-1. 以下のエラーを解決してください：
-   - `pandoc: command not found`
-   - EPUBcheck での RSC-004 エラー
-   - Kindle Previewer のクラッシュ
-
-2. ビルド時の問題を特定し、解決する方法を説明してください。
-
-3. KDP アップロード時の問題を解決する手順を説明してください。
 
 ## 次のステップ
 
