@@ -103,10 +103,12 @@ pre {
 } */
 
 code {
-  font-family: serif, sans-serif;
-  font-size: 0.8em;
-  line-height: 0.8;
+  font-family: "Hiragino Sans", "Noto Sans JP", serif, sans-serif;
+  font-size: 0.75em;
+  line-height: 0.7;
   letter-spacing: 0;
+  margin: 0 0 0 0 !important;
+  padding: 0 0 0 0 !important;
   word-break: break-all;
   white-space: pre-wrap;
 }
