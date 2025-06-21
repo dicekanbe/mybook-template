@@ -23,6 +23,7 @@ h6 {
 
   h1 {
     margin-left: 0em;
+    padding-left: 0em;
     margin-bottom: 0.2em;
     border-bottom: 1px solid;
     border-color: #000000;
@@ -72,7 +73,7 @@ h6 {
     padding: 0;
     margin-left: 0.5em;
     font-size: 0.8em;
-    line-height: 1.1;
+    line-height: 1.05;
   }
 
   /* ---------- TABLE STYLING ---------- */
@@ -84,7 +85,7 @@ h6 {
     /* 上下余白 */
     width: 100%;
     /* 幅いっぱい */
-    font-size: 0.9em;
+    font-size: 0.8em;
     /* 少しだけ縮小で読みやすく */
   }
 
@@ -144,6 +145,8 @@ pre {
   background-color: #eff1f4;
   font-family: monospace;
   line-height: 1.0;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
 
 
@@ -170,16 +173,10 @@ section ul {
   padding-bottom: 0;
 }
 
-section ul li {
-  margin: 0 0 0 0;
-  padding-left: 0.2em;
-  font-size: 0.9em;
-}
-
 section > ol > li {
   margin: 0 0 0 0;
   padding-left: 0.1em;
-  font-size: 0.8em;
+  font-size: 1em;
 
 }
 
