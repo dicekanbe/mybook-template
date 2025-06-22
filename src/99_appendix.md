@@ -9,7 +9,7 @@ chapter-start: 8
 
 # 付録: 用語集
 
-## A.1 基本用語
+## 基本用語
 
 | 用語          | 意味・説明                                   |
 |---------------|----------------------------------------------|
@@ -17,7 +17,7 @@ chapter-start: 8
 | **CSL**       | Citation Style Language。Pandoc の文献引用書式 |
 | **Lua フィルタ** | Pandoc の中間 AST を Lua で操作する拡張機能 |
 
-## A.2 技術用語
+## 技術用語
 
 | 用語          | 意味・説明                                   |
 |---------------|----------------------------------------------|
@@ -25,7 +25,7 @@ chapter-start: 8
 | **YAML**      | データ記述言語。Pandoc のメタデータに使用     |
 | **XHTML**     | XML ベースの HTML。EPUB の本文に使用         |
 
-## A.3 ツール関連
+## ツール関連
 
 | 用語          | 意味・説明                                   |
 |---------------|----------------------------------------------|
@@ -35,19 +35,19 @@ chapter-start: 8
 
 # 参考リンク
 
-## B.1 公式ドキュメント
+## 公式ドキュメント
 
 - Pandoc 公式ドキュメント <https://pandoc.org/>
 - Kindle Publishing Guidelines <https://kdp.amazon.com/>
 - EPUB 3 仕様書 <https://www.w3.org/publishing/epub3/>
 
-## B.2 ツールとライブラリ
+## ツールとライブラリ
 
 - Homebrew <https://brew.sh/>
 - GitHub Actions <https://docs.github.com/actions>
 - Lua フィルタ <https://pandoc.org/lua-filters.html>
 
-## B.3 コミュニティリソース
+## コミュニティリソース
 
 - Pandocユーザーグループ <https://groups.google.com/forum/#!forum/pandoc-discuss>
 - StackOverflowのPandocタグ <https://stackoverflow.com/questions/tagged/pandoc>
@@ -55,7 +55,7 @@ chapter-start: 8
 
 # 索引
 
-## C.1 コマンド一覧
+## コマンド一覧
 
 | コマンド | 説明 | ページ |
 |----------|------|--------|
@@ -63,7 +63,7 @@ chapter-start: 8
 | `epubcheck` | EPUB 検証 | 25 |
 | `fswatch` | ファイル監視 | 45 |
 
-## C.2 設定ファイル
+## 設定ファイル
 
 | ファイル | 説明 | ページ |
 |----------|------|--------|
@@ -71,7 +71,7 @@ chapter-start: 8
 | `Makefile` | ビルド設定 | 40 |
 | `custom.css` | スタイル設定 | 50 |
 
-## C.3 トラブルシューティング
+## トラブルシューティング
 
 | 問題 | 解決策 | ページ |
 |------|--------|--------|
