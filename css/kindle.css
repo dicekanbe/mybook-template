@@ -5,9 +5,49 @@
   body {
     font-family: "Hiragino Sans", "Noto Sans JP", serif, sans-serif;
     word-wrap: break-word;
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
+  }
+
+
+
+  h1 {
+    margin-left: 0em;
+    padding-left: 0em;
+    margin-bottom: 0.2em;
+    border-bottom: 1px solid;
+    border-color: #000000;
+    
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: bold;
+   }
+
+  h2 {
+    margin-top: 0.2em;
+    margin-left: 0px;
+    margin-bottom: 0.1em;
+    text-align: left;
+    font-size: 1em;
+    font-weight: bold; 
+  }
+
+
+  h3 {
+    font-size: 0.95em;
+    margin-top: 0.2em;
+    margin-bottom: 0.1em;
+    margin-left: 0.1em;
+    text-align: left;
+    font-weight: bold;
+  }
+  h4 {
+    font-size: 0.9em;
+    margin-top: 0.2em;
+    margin-left: 0.3em;
+    margin-bottom: 0;
+    text-align: left;
   }
 
 
@@ -19,6 +59,13 @@
     margin: 0.6em 0;
   }
 
+  p {
+    margin: 0;
+    padding: 0;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    line-height: 1;
+  }
 
   /* ---------- TABLE STYLING ---------- */
   table {
@@ -90,29 +137,20 @@ pre {
   margin: 0.1em 0.1em 0.5em 0.5em;
   border: 1px solid;
   background-color: #ffffff;
+  
 }
 
-/* pre > code {
-  white-space: pre;      
-  display: block;        
-  font-family: "Menlo", monospace;
-  border: 1px solid;
-  border-color: #e80414;
-  font-size: 0.8em;
-  line-height: 0.8em;
-} */
 
 code {
-  font-family: "Hiragino Sans", "Noto Sans JP", serif, sans-serif;
+  font-family: monospace;
   letter-spacing: 0;
-  margin: 0 0 0 0 !important;
-  padding: 0 0 0 0 !important;
   word-break: break-all;
   white-space: pre-wrap;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 :not(pre) > code {
+  font-family: monospace;
   padding: 0.15em 0.1em 0;
   font-size: 1em;
   word-break: normal;
@@ -127,32 +165,37 @@ code {
   body { color: #ddd; background: #111; }
 }
 
+/* section 配下のol , ul li のデザイン */
+section ol  {
+  padding: 0em;
+  margin: 0em;
+  margin-left: 0.2em;
+  margin-bottom: 0.2em;
+  padding-bottom: 0.2em;
 
-/* ついでに余白・フォントサイズを整えると見やすい */
-/*
-pre {
-  background: #f6f8fa;   
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px 6px;
-  overflow-x: auto;      
-  font-size: 0.92em;     
-  border: 1px solid;
-  border-color: #e80414;
 }
 
- pre > code {
-  white-space: pre;      
-  display: block;        
-  font-family: "Menlo", monospace;
-  border: 1px solid;
-  border-color: #e80414;
+section ul {
+  padding-top: 0;
+  margin-top: 0;
+  margin-left: 0.5em;
+  margin-bottom: 0.1em;
+  padding-bottom: 0;
 }
 
-code {
-  border: 1px solid;
-  border-color: #e80414;
-} */
+section > ol > li {
+  margin: 0 0 0 0;
+  padding-left: 0.1em;
+  font-size: 0.8em;
+
+}
+
+section > ul > li {
+  margin: 0 0 0 0;
+  padding-left: 0.2em;
+  font-size: 0.8em;
+}
+
 
 
 }
