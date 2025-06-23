@@ -1,11 +1,12 @@
 /* Apple Books (WebKit) 専用。Kindle は -webkit- を無視する */
-@media (min-width:0px) and (-webkit-min-device-pixel-ratio: 1) {
+@media (min-width: 0px) and (-webkit-min-device-pixel-ratio: 1) {
+  h1 { 
+    font-size: 2em; 
+    letter-spacing: 0.04em; 
+  }
 
-  h1 { font-size: 2em; letter-spacing: 0.04em; }
-
-  /* 余白調整 */
-  body { margin: 0 7%; }
-
-
+  body { 
+    margin: 0 7%; 
+  }
 }
 

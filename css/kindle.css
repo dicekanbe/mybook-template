@@ -1,58 +1,42 @@
 /* Kindle 端末・アプリ (KF8) だけに適用 */
 @media amzn-kf8 {
-
-  /* ベースフォントと行間 */
   body {
     font-family: "Hiragino Sans", "Noto Sans JP", serif, sans-serif;
     word-wrap: break-word;
     font-size: 1em;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    padding: 0;
+    margin: 0;
   }
 
-
-
   h1 {
-    margin-left: 0em;
-    padding-left: 0em;
-    margin-bottom: 0.2em;
-    border-bottom: 1px solid;
-    border-color: #000000;
-    
+    margin: 0 0 0.2em 0;
+    padding: 0;
+    border-bottom: 1px solid #000000;
     text-align: left;
     font-size: 1.1em;
     font-weight: bold;
-   }
+  }
 
   h2 {
-    margin-top: 0.2em;
-    margin-left: 0px;
-    margin-bottom: 0.1em;
+    margin: 0.2em 0 0.1em 0;
     text-align: left;
     font-size: 1em;
     font-weight: bold; 
   }
 
-
   h3 {
     font-size: 0.95em;
-    margin-top: 0.2em;
-    margin-bottom: 0.1em;
-    margin-left: 0.1em;
+    margin: 0.2em 0 0.1em 0.1em;
     text-align: left;
     font-weight: bold;
   }
+
   h4 {
     font-size: 0.9em;
-    margin-top: 0.2em;
-    margin-left: 0.3em;
-    margin-bottom: 0;
+    margin: 0.2em 0 0 0.3em;
     text-align: left;
   }
 
-
-
-  /* 画像の自動リサイズ */
   img {
     max-width: 100%;
     height: auto;
@@ -60,61 +44,46 @@
   }
 
   p {
-    margin: 0;
+    margin: 0 0 0 0.5em;
     padding: 0;
-    margin-left: 0.5em;
     font-size: 0.8em;
   }
 
   /* ---------- TABLE STYLING ---------- */
   table {
-    /* 全セルを 1 本の枠線で囲む */
     border-collapse: collapse;
-    /* セル境界を重ねる */
     margin: 0.8em 0;
-    /* 上下余白 */
     width: 100%;
-    /* 幅いっぱい */
     font-size: 0.9em;
-    /* 少しだけ縮小で読みやすく */
   }
 
-  /* テーブルの外枠 */
-  table,
-  th,
-  td {
+  table, th, td {
     border: 1px solid #bbb;
-    /* お好みで色変更 (#ccc 等) */
     font-size: 0.8em;
   }
 
-  /* ヘッダー行 */
   thead th {
     background: #f0f0f0;
-    /* 薄いグレーで強調 */
     font-weight: 700;
     text-align: left;
     padding: 4px 6px;
   }
 
-  /* ボディ行 */
   tbody td {
     padding: 4px 6px;
   }
 
-  /* 偶数行を薄く塗り分けて可読性アップ */
   tbody tr:nth-child(even) {
     background: #fafafa;
   }
 
-
-  /* Start of Selection */
+  /* ---------- TOC STYLING ---------- */
   nav#toc .toc-section-number {
     display: none;
   }
 
   nav#toc {
-    padding: 0em;
+    padding: 0;
     border-radius: 5px;
   }
 
@@ -126,83 +95,63 @@
   nav#toc li {
     margin: 0.2em 0;
   }
-  /* End of Selection */
 
+  /* ---------- CODE BLOCK STYLING ---------- */
+  section pre {
+    padding: 0.1em 0.1em 0.5em 0.5em;
+    margin: 0.1em 0.1em 0.5em 0.5em;
+    border: 1px solid;
+    background-color: #ffffff;
+  }
 
-/* ---------- CODE BLOCK STYLING ---------- */
+  code {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
 
+  :not(pre) > code {
+    font-family: monospace;
+    padding: 0.15em 0.1em 0;
+    font-size: 1em;
+    word-break: normal;
+    vertical-align: 0.06em;
+    background-color: rgb(248 238 220 / 66%);
+  }
 
-section pre {
-  padding: 0.1em 0.1em 0.5em 0.5em;
-  margin: 0.1em 0.1em 0.5em 0.5em;
-  border: 1px solid;
-  background-color: #ffffff;
-  
-}
+  /* ---------- LIST STYLING ---------- */
+  section ol, section ul {
+    padding: 0;
+    margin: 0 0 0.2em 0.2em;
+    padding-bottom: 0.2em;
+  }
 
+  section ol li {
+    margin: 0;
+    padding-left: 0.1em;
+    font-size: 0.8em;
+  }
 
-code {
-  font-family: 'Courier New',monospace;
-  letter-spacing: 0;
-  word-break: break-all;
-  white-space: pre-wrap;
+  section ol li p {
+    font-size: 1em;
+  }
 
-}
+  section ol li pre {
+    font-size: 1.1em;
+  }
 
-:not(pre) > code {
-  font-family:  monospace;
-  padding: 0.15em 0.1em 0;
-  font-size: 1em;
-  word-break: normal;
-  vertical-align: 0.06em;
-  background-color: rgb(248 238 220 / 66%);
-}
+  section ul li {
+    margin: 0;
+    padding-left: 0.2em;
+    font-size: 0.8em;
+  }
 
-
-
-/* ダークモード対応 (両リーダー共通) */
-@media (prefers-color-scheme: dark) {
-  body { color: #ddd; background: #111; }
-}
-
-/* section 配下のol , ul li のデザイン */
-section ol  {
-  padding: 0em;
-  margin: 0em;
-  margin-left: 0.2em;
-  margin-bottom: 0.2em;
-  padding-bottom: 0.2em;
-
-}
-
-section ul {
-  padding-top: 0;
-  margin-top: 0;
-  margin-left: 0.2em;
-  margin-bottom: 0.1em;
-  padding-bottom: 0;
-}
-
-section ol li {
-  margin: 0 0 0 0;
-  padding-left: 0.1em;
-  font-size: 0.8em;
-
-}
-section ol li p {
-  font-size: 1em;
-}
-
-section ul li {
-  margin: 0 0 0 0;
-  padding-left: 0.2em;
-  font-size: 0.8em;
-}
-
-section ol li pre {
-  font-size: 1.1em;
-}
-
-
-
+  /* ダークモード対応 */
+  @media (prefers-color-scheme: dark) {
+    body { 
+      color: #ddd; 
+      background: #111; 
+    }
+  }
 }
