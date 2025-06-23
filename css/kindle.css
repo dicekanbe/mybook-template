@@ -64,7 +64,6 @@
     padding: 0;
     margin-left: 0.5em;
     font-size: 0.8em;
-    line-height: 1;
   }
 
   /* ---------- TABLE STYLING ---------- */
@@ -132,7 +131,8 @@
 
 /* ---------- CODE BLOCK STYLING ---------- */
 
-pre {
+
+section pre {
   padding: 0.1em 0.1em 0.5em 0.5em;
   margin: 0.1em 0.1em 0.5em 0.5em;
   border: 1px solid;
@@ -142,15 +142,15 @@ pre {
 
 
 code {
-  font-family: monospace;
+  font-family: 'Courier New',monospace;
   letter-spacing: 0;
   word-break: break-all;
   white-space: pre-wrap;
-  font-size: 0.8em;
+
 }
 
 :not(pre) > code {
-  font-family: monospace;
+  font-family:  monospace;
   padding: 0.15em 0.1em 0;
   font-size: 1em;
   word-break: normal;
@@ -178,22 +178,29 @@ section ol  {
 section ul {
   padding-top: 0;
   margin-top: 0;
-  margin-left: 0.5em;
+  margin-left: 0.2em;
   margin-bottom: 0.1em;
   padding-bottom: 0;
 }
 
-section > ol > li {
+section ol li {
   margin: 0 0 0 0;
   padding-left: 0.1em;
   font-size: 0.8em;
 
 }
+section ol li p {
+  font-size: 1em;
+}
 
-section > ul > li {
+section ul li {
   margin: 0 0 0 0;
   padding-left: 0.2em;
   font-size: 0.8em;
+}
+
+section ol li pre {
+  font-size: 1.1em;
 }
 
 
