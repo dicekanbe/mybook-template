@@ -137,13 +137,14 @@ book/
 
 ### 命名規則
 
-- ファイル名：`XX_chapter.md`（XX は章番号）
-- 画像ファイル：`figure-XX.svg`（XX は連番）
-- 変数名：`snake_case`
+- ファイル名：XX_chapter.md（XX は章番号）
+- 画像ファイル：figure-XX.svg（XX は連番）
+- 変数名：snake_case
 
 ### 推奨設定
 
-```yaml
+
+```
 ---
 documentclass: book
 toc: true

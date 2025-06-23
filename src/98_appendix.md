@@ -5,9 +5,10 @@ summary: |
   pandoc-crossref と Lua フィルタで図表番号、相互参照、目次カスタマイズを行います。
 keywords: ["Lua filter", "crossref"]
 chapter-start: 8
+unnumbered-class: "unnumbered"
 ---
 
-# 付録: 用語集
+# 付録: 用語集 {.unnumbered}
 
 ## 基本用語
 
